@@ -4,7 +4,7 @@
 #
 Name     : uritemplate
 Version  : 0.6
-Release  : 4
+Release  : 5
 URL      : https://pypi.python.org/packages/source/u/uritemplate/uritemplate-0.6.tar.gz
 Source0  : https://pypi.python.org/packages/source/u/uritemplate/uritemplate-0.6.tar.gz
 Summary  : URI Templates
