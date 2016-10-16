@@ -1,5 +1,5 @@
 PKG_NAME := uritemplate
-URL := https://pypi.python.org/packages/source/u/uritemplate/uritemplate-0.6.tar.gz
+URL := http://pypi.debian.net/uritemplate/uritemplate-3.0.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
