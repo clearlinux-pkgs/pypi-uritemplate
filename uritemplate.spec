@@ -14,7 +14,7 @@ Requires: uritemplate-python3
 Requires: uritemplate-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
