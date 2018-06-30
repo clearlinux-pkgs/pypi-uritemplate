@@ -4,7 +4,7 @@
 #
 Name     : uritemplate
 Version  : 3.0.0
-Release  : 19
+Release  : 20
 URL      : http://pypi.debian.net/uritemplate/uritemplate-3.0.0.tar.gz
 Source0  : http://pypi.debian.net/uritemplate/uritemplate-3.0.0.tar.gz
 Summary  : URI templates
