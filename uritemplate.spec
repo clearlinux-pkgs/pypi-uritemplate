@@ -4,7 +4,7 @@
 #
 Name     : uritemplate
 Version  : 4.1.1
-Release  : 46
+Release  : 47
 URL      : https://files.pythonhosted.org/packages/d2/5a/4742fdba39cd02a56226815abfa72fe0aa81c33bed16ed045647d6000eba/uritemplate-4.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d2/5a/4742fdba39cd02a56226815abfa72fe0aa81c33bed16ed045647d6000eba/uritemplate-4.1.1.tar.gz
 Summary  : Implementation of RFC 6570 URI Templates
@@ -57,21 +57,22 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636418739
+export SOURCE_DATE_EPOCH=1641420764
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
 export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
-python3 setup.py build
+python3 -m build --wheel --skip-dependency-check --no-isolation
 
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/uritemplate
 cp %{_builddir}/uritemplate-4.1.1/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/uritemplate/2b8b815229aa8a61e483fb4ba0588b8b6c491890
-python3 -tt setup.py build  install --root=%{buildroot}
+cp %{_builddir}/uritemplate-4.1.1/LICENSE.BSD %{buildroot}/usr/share/package-licenses/uritemplate/7720cc454c495510106e04e6173b0e2fb94e077b
+pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -82,6 +83,7 @@ echo ----[ mark ]----
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/uritemplate/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+/usr/share/package-licenses/uritemplate/7720cc454c495510106e04e6173b0e2fb94e077b
 
 %files python
 %defattr(-,root,root,-)
