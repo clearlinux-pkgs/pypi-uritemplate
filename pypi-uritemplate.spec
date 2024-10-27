@@ -7,7 +7,7 @@
 #
 Name     : pypi-uritemplate
 Version  : 4.1.1
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/d2/5a/4742fdba39cd02a56226815abfa72fe0aa81c33bed16ed045647d6000eba/uritemplate-4.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d2/5a/4742fdba39cd02a56226815abfa72fe0aa81c33bed16ed045647d6000eba/uritemplate-4.1.1.tar.gz
 Summary  : Implementation of RFC 6570 URI Templates
